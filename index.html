@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Plugin</title>
+  <meta name="description" content="A place for ideas, stories, creativity, and human connection. Currently evolving." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #6f6a64;
+      --faint: #a8a39c;
+      --paper: #faf9f6;
+      --line: #e7e3dc;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 8vw, 6rem) clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    /* Masthead */
+    .masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: clamp(3rem, 12vw, 7rem);
+    }
+
+    .mark {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .status-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--ink);
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+
+    /* Hero */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(3rem, 13vw, 6.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .tagline {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.15rem, 3.5vw, 1.6rem);
+      color: var(--muted);
+      margin-top: clamp(1.5rem, 4vw, 2.25rem);
+      max-width: 32ch;
+      text-wrap: pretty;
+    }
+
+    .rule {
+      height: 1px;
+      background: var(--line);
+      border: 0;
+      margin: clamp(3rem, 9vw, 5rem) 0;
+      max-width: 4.5rem;
+    }
+
+    .statement p {
+      font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+      line-height: 1.7;
+      color: var(--ink);
+      max-width: 40ch;
+      font-weight: 300;
+      text-wrap: pretty;
+    }
+
+    .statement p + p {
+      margin-top: 0.4rem;
+    }
+
+    .evolving {
+      margin-top: clamp(2.5rem, 7vw, 4rem);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: clamp(4rem, 12vw, 8rem);
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    footer .name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    footer .signal {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      font-family: var(--serif);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <span class="mark">Happy Plugin</span>
+      <span class="status-tag"><span class="dot" aria-hidden="true"></span> Currently evolving</span>
+    </header>
+
+    <main class="hero">
+      <h1>Happy Plugin</h1>
+      <p class="tagline">A place for ideas, stories, creativity, and human connection.</p>
+
+      <hr class="rule" />
+
+      <div class="statement">
+        <p>Some projects begin long before they are named.</p>
+        <p>Some communities begin long before they gather.</p>
+      </div>
+
+      <p class="evolving">Currently evolving</p>
+    </main>
+
+    <footer>
+      <span class="name">Happy Plugin</span>
+      <span class="signal">For now, this page is only a signal.</span>
+    </footer>
+  </div>
+</body>
+</html>
